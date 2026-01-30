@@ -337,7 +337,7 @@ Ao final deste procedimento, o sistema estará:
 1. Clique em **Login**
 2. Clique em **Run / Iniciar**
 
-💡 *Nesta etapa o plc é inicido.*
+💡 *Nesta etapa o plc é inicido. Vá ate a ESP clique no botão RTN1 e a bobina RELE será acionada.*
 
 ---
 
