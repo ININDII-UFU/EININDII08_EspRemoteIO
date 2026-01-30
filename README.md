@@ -51,314 +51,293 @@ Ao final deste procedimento, o sistema estará:
 
 1. Abrir o CODESYS
 2. Selecionar **File → New Project**
-3. Escolher **Standard Project**
-4. Confirmar
+3. Escolher **Projeto vazio**
+4. Dar um nome para o projeto
+5. Confirmar
 
 💡 *Este passo cria a base do projeto PLC.*
 
 ---
 
-### 🔹 Passo 2 – Selecionar o dispositivo PLC
+### 🔹 Passo 2 – Selecionando o dispositivo PLC
 ![fig2](assets/imgs/fig2.png)
 
-1. Escolher o dispositivo PLC adequado
-2. Definir linguagem (ex: Structured Text)
-3. Confirmar
-
-⚠️ *A escolha incorreta do dispositivo pode impedir a comunicação.*
+1. Na arvore de dispositivos **Clicar com o mouse direito** no nome do projeto 
+2. Na opçoes que irão aparecer escolher **Adicionar dispositivos**
 
 ---
 
-### 🔹 Passo 3 – Configuração inicial do projeto
+### 🔹 Passo 3 – Escolhendo o PLC utilizado 
 ![fig3](assets/imgs/fig3.png)
 
-1. Verificar árvore de dispositivos
-2. Confirmar criação do Application
-3. Salvar o projeto
+1. Na janela **Adicionar dispositivos** escolhar o PLC **CODESYS CONTROL Win V3 x64**
+2. Na sequencia click no botão Adicionar dispositivo
+
+⚠️ *Verifique se sua vertão é x64 ou x86*
 
 ---
 
-### 🔹 Passo 4 – Inserir o dispositivo Modbus TCP
+### 🔹 Passo 4 – Inserir as configurações de Tarefas
 ![fig4](assets/imgs/fig4.png)
 
-1. Clique com botão direito em **Device**
-2. Add Device
-3. Selecionar **Modbus TCP Master**
+1. Clique com botão direito em **Application**
+2. Na sequencia clique em **Adicionar Objeto**
+3. Por último selecione **Configuração de Tarefas**
 
+⚠️ *A configuração de Tarefas é o responsavel por todas as rotinas ciclicas.*
 ---
 
-### 🔹 Passo 5 – Configurar parâmetros de comunicação
+### 🔹 Passo 5 – Criar uma tarefa
 ![fig5](assets/imgs/fig5.png)
 
-1. Definir IP da ESP32
-2. Porta padrão Modbus (502)
-3. Timeout e ciclos de comunicação
+1. Clique com botão direito em **Application**
+2. Na sequencia clique em **Adicionar Objeto**
+3. Por último selecione **DOU**
 
-⚠️ *IP incorreto impede comunicação.*
+⚠️ *Nesta etapa vc cria uma tarefa nova.*
 
 ---
 
-### 🔹 Passo 6 – Iniciar a adição de um dispositivo
+### 🔹 Passo 6 – Iniciar a adição da tarefa
 ![fig6](assets/imgs/fig6.png)
 
-1. Clicar com o botão direito sobre **Application**
-2. Selecionar **Add Device…**
+1. De um nome para sua tarefa tipo **PLC_PRG**
+2. Clicar com o botão esquerdo sobre **Programa**
+3. Selecionar **Gráfico de Linguagem Ladder (LD)**
 
-💡 *Todo barramento de comunicação é tratado como um dispositivo no CODESYS.*
+💡 *Você pode escolher um outro tipo de linguagem para sua tarefa.*
 
 ---
 
-### 🔹 Passo 7 – Selecionar a interface Ethernet
+### 🔹 Passo 7 – Adicionar tarefa principal para o Loop
 ![fig7](assets/imgs/fig7.png)
 
-1. Localizar o dispositivo **Ethernet**
-2. Manter o fabricante padrão (CODESYS)
-3. Confirmar a adição da interface
+1. Clique com o mouse direito sobre o **PLC_PRG** 
+2. Sem soltar o mouse arraste o mesmo para dentro de **Task (IEC_Tasks)**.
 
-⚠️ *A comunicação Modbus TCP exige interface Ethernet configurada.*
+⚠️ *No loop deve ter pelo menos uma tarefa, mas pode ter mais à seu critério.*
 
 ---
 
-### 🔹 Passo 8 – Ethernet adicionada ao projeto
+### 🔹 Passo 8 – Atualizar o dispositivo do PLC
 ![fig8](assets/imgs/fig8.png)
 
-1. Verificar se a interface **Ethernet** aparece na árvore do projeto
-2. Confirmar que está vinculada à Application
+1. Na árvore de dispositivos, **clique com o botão direito** no **PLC (CODESYS Control RTE...)**
+2. Selecione **Atualizar dispositivo...**
+
+💡 *Isso ajuda o CODESYS a recarregar as opções e dispositivos disponíveis.*
 
 ---
 
-### 🔹 Passo 9 – Adicionar dispositivo sobre a Ethernet
+### 🔹 Passo 9 – Adicionar o adaptador Ethernet
 ![fig9](assets/imgs/fig9.png)
 
-1. Clicar com o botão direito sobre **Ethernet**
-2. Selecionar **Add Device…**
-3. Abrir a lista de protocolos compatíveis
+1. Na janela **Adicionar dispositivo**, selecione **Ethernet**
+2. Clique em **Adicionar dispositivo**
 
 ---
 
-### 🔹 Passo 10 – Inserir o Modbus TCP Master
+### 🔹 Passo 10 – Inserir dispositivo no Ethernet
 ![fig10](assets/imgs/fig10.png)
 
-1. Selecionar **Modbus TCP Master**
-2. Confirmar o fabricante **CODESYS**
-3. Adicionar o dispositivo ao projeto
-
-💡 *O Master será responsável por iniciar a comunicação Modbus.*
+1. Clique com o botão direito em **Ethernet (Ethernet)**
+2. Selecione **Adicionar dispositivo...**
 
 ---
 
-### 🔹 Passo 11 – Verificar o Master na árvore
+### 🔹 Passo 11 – Adicionar Modbus TCP Client
 ![fig11](assets/imgs/fig11.png)
 
-1. Confirmar que o **Modbus_TCP_Master** aparece abaixo da Ethernet
-2. Verificar a hierarquia correta do barramento
+1. Selecione **Modbus TCP Client**
+2. Clique em **Adicionar dispositivo**
 
 ---
 
-### 🔹 Passo 12 – Preparar a adição do dispositivo escravo
+### 🔹 Passo 12 – Adicionar dispositivo no Modbus TCP Client
 ![fig12](assets/imgs/fig12.png)
 
-1. Clicar com o botão direito no **Modbus_TCP_Master**
-2. Selecionar **Add Device…**
+1. Clique com o botão direito em **Modbus_TCP_Client**
+2. Selecione **Adicionar dispositivo...**
 
 ---
 
-### 🔹 Passo 13 – Inserir o Modbus TCP Slave
+### 🔹 Passo 13 – Adicionar Modbus TCP Server
 ![fig13](assets/imgs/fig13.png)
 
-1. Selecionar **Modbus TCP Slave**
-2. Confirmar a adição do dispositivo
-
-💡 *Este Slave representa a ESP32 com firmware ESP_Remote_IO.*
+1. Selecione **Modbus TCP Server**
+2. Clique em **Adicionar dispositivo**
 
 ---
 
-### 🔹 Passo 14 – Slave adicionado na árvore
+### 🔹 Passo 14 – Abrir os ícones ocultos do Windows
 ![fig14](assets/imgs/fig14.png)
 
-1. Verificar se o Slave aparece abaixo do Master
-2. Confirmar a estrutura **Ethernet → Master → Slave**
+1. Na barra do Windows, clique na seta **^** (ícones ocultos)
+
+💡 *O CODESYS Control Win fica ativo nessa área.*
 
 ---
 
-### 🔹 Passo 15 – Configurar o Unit ID do Slave
+### 🔹 Passo 15 – Iniciar o CODESYS Control Win
 ![fig15](assets/imgs/fig15.png)
 
-1. Selecionar o **Modbus TCP Slave**
-2. Acessar suas propriedades
-3. Configurar o **Unit ID**
-4. Garantir que o valor seja igual ao configurado na ESP32
-
-⚠️ *Unit ID incorreto impede a comunicação.*
+1. **Clique duas vezes** no ícone **CODESYS Control Win**
 
 ---
 
-### 🔹 Passo 16 – Conferir a topologia de comunicação
+### 🔹 Passo 16 – Selecionar o controlador no projeto
 ![fig16](assets/imgs/fig16.png)
 
-1. Analisar a topologia completa do projeto
-2. Confirmar que todos os dispositivos estão no barramento correto
+1. Selecione **CODESYS Control RTE...** na árvore de dispositivos
 
 ---
 
-### 🔹 Passo 17 – Verificar o ambiente CODESYS em execução
+### 🔹 Passo 17 – Procurar o dispositivo na rede
 ![fig17](assets/imgs/fig17.png)
 
-1. Confirmar que o CODESYS está em execução
-2. Verificar se o projeto correto está carregado
+1. Em **Communication Settings**, clique em **Scan Network**
 
 ---
 
-### 🔹 Passo 18 – Iniciar o CODESYS a partir do atalho (se necessário)
+### 🔹 Passo 18 – Selecionar o dispositivo encontrado
 ![fig18](assets/imgs/fig18.png)
 
-1. Localizar o atalho do CODESYS na área de trabalho
-2. Executar o software
-3. Abrir o projeto salvo
+1. Selecione o dispositivo encontrado (ex.: **PC_...**)
+2. Clique em **OK**
 
-💡 *Garante que o ambiente esteja pronto para testes e download.*
-### 🔹 Passo 19 – Acessar as configurações do Modbus TCP Slave
+---
+
+### 🔹 Passo 19 – Selecionar a interface de rede
 ![fig19](assets/imgs/fig19.png)
 
-1. Selecionar o **Modbus TCP Slave** na árvore de dispositivos
-2. Abrir a aba de **Configurações / Parameters**
-3. Verificar endereço IP e parâmetros básicos
+1. Clique em **Modbus_TCP_Client**
+2. Clique em **Pesquisar...**
+3. Selecione o **adaptador de rede correto**
+4. Clique em **OK**
 
-💡 *Essas configurações definem como o dispositivo será identificado na rede.*
+⚠️ *Adaptador incorreto impede a comunicação Modbus.*
 
 ---
 
-### 🔹 Passo 20 – Configurar endereço IP do Slave
+### 🔹 Passo 20 – Habilitar reconexão automática
 ![fig20](assets/imgs/fig20.png)
 
-1. Definir o **Endereço IP** do dispositivo remoto
-2. Configurar **Subnet Mask** e **Gateway**, se necessário
-3. Garantir que o IP esteja na mesma rede do PLC
-
-⚠️ *IPs fora da mesma sub-rede impedem a comunicação.*
+1. Selecione **Modbus_TCP_Client**
+2. Marque **Reconexão automática**
 
 ---
 
-### 🔹 Passo 21 – Ajustar porta de comunicação Modbus TCP
+### 🔹 Passo 21 – Criar canais no Modbus TCP Server
 ![fig21](assets/imgs/fig21.png)
 
-1. Verificar a **porta TCP** configurada
-2. Manter o valor padrão **502**, quando aplicável
-3. Confirmar compatibilidade com o firmware da ESP32
+1. Selecione **Modbus_TCP_Server**
+2. Clique em **Adicionar canal...**
 
 ---
 
-### 🔹 Passo 22 – Acessar configuração de canais Modbus
+### 🔹 Passo 22 – Configurar o Channel 0 (Coils)
 ![fig22](assets/imgs/fig22.png)
 
-1. Expandir o **Modbus TCP Slave**
-2. Localizar a seção de **Channels / I/O Mapping**
-3. Preparar a criação dos canais de comunicação
-
-💡 *Os canais representam as variáveis que serão trocadas via Modbus.*
+1. Defina o **Nome do canal** (ex.: Channel 0) 
+2. Preencha tudo conforme esta a imagem.
+3. Clique em **OK**
 
 ---
 
-### 🔹 Passo 23 – Criar canal de leitura (Input Registers)
+### 🔹 Passo 23 – Adicionar Channel 1 (Discrete Inputs)
 ![fig23](assets/imgs/fig23.png)
 
-1. Adicionar um novo canal Modbus
-2. Selecionar o tipo **Input Register**
-3. Definir o endereço inicial do registro
-4. Configurar o tipo de dado
+1. Clique em **Adicionar canal...**
+2. Nomeie como **Channel 1**
+3. Tipo: **Read Discrete Inputs (Função 2)**
+4. Preencha tudo conforme esta a imagem.
+5. Clique em **OK**
 
 ---
 
-### 🔹 Passo 24 – Criar canal de escrita (Holding Registers)
+### 🔹 Passo 24 – Adicionar Channel 2 (Holding Registers)
 ![fig24](assets/imgs/fig24.png)
 
-1. Adicionar um novo canal Modbus
-2. Selecionar o tipo **Holding Register**
-3. Definir endereço e tamanho
-4. Ajustar tipo de dado conforme a aplicação
-
-⚠️ *O endereço deve coincidir com o definido no firmware da ESP32.*
+1. Clique em **Adicionar canal...**
+2. Nome: **Channel 2**
+3. Tipo: **Write Multiple Registers (Função 16)**
+4. Preencha tudo conforme esta a imagem.
+5. Clique em **OK**
 
 ---
 
-### 🔹 Passo 25 – Verificar mapeamento dos canais Modbus
+### 🔹 Passo 25 – Adicionar Channel 3 (Input Registers)
 ![fig25](assets/imgs/fig25.png)
 
-1. Conferir todos os canais configurados
-2. Verificar endereços, tipos e tamanhos
-3. Garantir que não há sobreposição de registros
+1. Clique em **Adicionar canal...**
+2. Nome: **Channel 3**
+3. Tipo: **Read Input Registers (Função 4)**
+4. Preencha tudo conforme esta a imagem.
+5. Clique em **OK**
 
 ---
 
-### 🔹 Passo 26 – Criar variáveis globais para comunicação
+### 🔹 Passo 26 – Conferir os canais criados
 ![fig26](assets/imgs/fig26.png)
 
-1. Criar uma **Global Variable List (GVL)**
-2. Definir variáveis associadas aos canais Modbus
-3. Ajustar tipos de dados compatíveis
+1. Verifique se os **Channels 0 a 3** aparecem corretamente
 
-💡 *As GVLs facilitam o acesso às variáveis no programa PLC.*
+💡 *Resumo do que o servidor Modbus irá disponibilizar.*
 
 ---
 
-### 🔹 Passo 27 – Associar variáveis aos canais Modbus
+### 🔹 Passo 27 – Ajustar o Unit-ID do Modbus TCP Server
 ![fig27](assets/imgs/fig27.png)
 
-1. Vincular cada canal Modbus a uma variável PLC
-2. Confirmar a direção de leitura/escrita
-3. Salvar as configurações
+1. Acesse **ModbusTCPServer Parâmetros**
+2. Ajuste o **Unit-ID** para **1** 
+
+💡 *Se estiver trabalhando com um dispositivo que não é 1 coloque o valor correspondente dele.*
 
 ---
 
-### 🔹 Passo 28 – Inserir variáveis no PLC_PRG
+### 🔹 Passo 28 – Mapear variáveis do PLC
 ![fig28](assets/imgs/fig28.png)
 
-1. Abrir a POU **PLC_PRG**
-2. Inserir as variáveis globais no programa
-3. Preparar a lógica de uso dos dados Modbus
+1. Acesse **Mapeamento de E/S**
+2. Nomeie todas as variáveis do PLC aos canais Modbus conforme a imagem (ex.: **D2**)
+
+💡 *Aqui ocorre a integração PLC ↔ Modbus.*
 
 ---
 
-### 🔹 Passo 29 – Implementar lógica de teste no programa
-![fig29](assets/imgs/fig29.png)
-
-1. Criar lógica simples de leitura/escrita
-2. Utilizar valores fixos ou variáveis de teste
-3. Verificar coerência do fluxo do programa
-
-💡 *Este passo ajuda a validar a comunicação antes do uso real.*
-
----
-
-### 🔹 Passo 30 – Compilar o projeto
+### 🔹 Passo 30 – Inserir uma bobina no Ladder
 ![fig30](assets/imgs/fig30.png)
 
-1. Selecionar **Build → Build**
-2. Verificar se não há erros de compilação
-3. Corrigir avisos, se existirem
-
-⚠️ *Erros impedem o download do programa.*
+1. Abra **PLC_PRG**
+2. Clique com botão direito → **Inserir bobina**
 
 ---
 
-### 🔹 Passo 31 – Fazer o download para o dispositivo
+### 🔹 Passo 31 – Selecionar a variável da bobina
 ![fig31](assets/imgs/fig31.png)
 
-1. Selecionar **Online → Login**
-2. Realizar o download do programa
-3. Confirmar a transferência para o dispositivo
+1. Clique no botão **...**
+2. Selecione a variável (ex.: **RELE**)
+3. Clique em **OK**
 
 ---
 
-### 🔹 Passo 32 – Colocar o PLC em modo RUN e testar comunicação
+### 🔹 Passo 32 – Resultado final no Ladder
 ![fig32](assets/imgs/fig32.png)
 
-1. Colocar o PLC em modo **RUN**
-2. Monitorar as variáveis Modbus
-3. Verificar troca de dados com a ESP32
-4. Confirmar comunicação Modbus TCP funcionando
+1. Faça o mesmo da etapa anterior para a bobina.
+✅ No final você deve ter o **Contato (RTN1)** e a **bobina (RELE)** adicionados com sucesso.
 
-💡 *Se os valores atualizarem corretamente, a comunicação foi estabelecida com sucesso.*
+---
+
+### 🔹 Passo 29 – Login e execução do PLC
+![fig29](assets/imgs/fig29.png)
+
+1. Clique em **Login**
+2. Clique em **Run / Iniciar**
+
+💡 *Nesta etapa o plc é inicido.*
 
 ---
 
