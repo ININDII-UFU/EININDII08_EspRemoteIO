@@ -12,7 +12,7 @@
 - [📋 Checklist antes de iniciar](#checklist-antes-de-iniciar)
 
 - [🧭 Instalando o Codesys](#instalando-o-codesys)
-  - [Passo 1 – Acessar o instalador do CODESYS](#passo-1--acessar-o-instalador-do-codesys)
+  - [Passo 1 – Acessar o instalador do CODESYS](#instalacao-passo-1)
   - [Passo 2 – Iniciar o instalador](#passo-2--iniciar-o-instalador)
   - [Passo 3 – Tela de boas-vindas do assistente](#passo-3--tela-de-boas-vindas-do-assistente)
   - [Passo 4 – Aceitar o contrato de licença](#passo-4--aceitar-o-contrato-de-licença)
@@ -123,9 +123,10 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 <a id="instalando-o-codesys"></a>
-<details open>
+<details>
   <summary><strong> 🧭 Instalando o Codesys  </strong></summary>
 
+<a id="instalacao-passo-1"></a>
 ### 🔹 Passo 1 – Acessar o instalador do CODESYS
 ![fig1](assets/inst/fig01.png)
 
@@ -221,10 +222,12 @@ Ao final deste procedimento, o sistema estará:
 
 ✅ *O CODESYS foi instalado com sucesso no sistema.*
 
+---
+
 </details>
 
 <a id="configurando-o-codesys"></a>
-<details open>
+<details>
   <summary><strong> ⚙️ Configurando o Codesys para funcionar com o EspRemoteIO  </strong></summary>
 
 ### 🔹 Passo 1 – Criar um novo projeto no CODESYS
