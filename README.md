@@ -13,15 +13,15 @@
 
 - [🧭 Instalando o Codesys](#instalando-o-codesys)
   - [Passo 1 – Acessar o instalador do CODESYS](#instalacao-passo-1)
-  - [Passo 2 – Iniciar o instalador](#passo-2--iniciar-o-instalador)
-  - [Passo 3 – Tela de boas-vindas do assistente](#passo-3--tela-de-boas-vindas-do-assistente)
-  - [Passo 4 – Aceitar o contrato de licença](#passo-4--aceitar-o-contrato-de-licença)
-  - [Passo 5 – Informações de versão](#passo-5--informações-de-versão-release-information)
-  - [Passo 6 – Definir pasta de instalação](#passo-6--definir-pasta-de-instalação)
-  - [Passo 7 – Selecionar o tipo de instalação](#passo-7--selecionar-o-tipo-de-instalação)
-  - [Passo 8 – Confirmar início da instalação](#passo-8--confirmar-início-da-instalação)
-  - [Passo 9 – Aguardar a instalação dos componentes](#passo-9--aguardar-a-instalação-dos-componentes)
-  - [Passo 10 – Concluir a instalação](#passo-10--concluir-a-instalação)
+  - [Passo 2 – Iniciar o instalador](#instalacao-passo-2)
+  - [Passo 3 – Tela de boas-vindas do assistente](#instalacao-passo-3)
+  - [Passo 4 – Aceitar o contrato de licença](#instalacao-passo-4)
+  - [Passo 5 – Informações de versão](#instalacao-passo-5)
+  - [Passo 6 – Definir pasta de instalação](#instalacao-passo-6)
+  - [Passo 7 – Selecionar o tipo de instalação](#instalacao-passo-7)
+  - [Passo 8 – Confirmar início da instalação](#instalacao-passo-8)
+  - [Passo 9 – Aguardar a instalação dos componentes](#instalacao-passo-9)
+  - [Passo 10 – Concluir a instalação](#instalacao-passo-10)
 
 - [⚙️ Configurando o Codesys](#configurando-o-codesys)
   - [Passo 1 – Criar um novo projeto no CODESYS](#passo-1--criar-um-novo-projeto-no-codesys)
@@ -138,6 +138,7 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 
+<a id="instalacao-passo-2"></a>
 ### 🔹 Passo 2 – Iniciar o instalador
 ![fig2](assets/inst/fig02.png)
 
@@ -146,6 +147,7 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 
+<a id="instalacao-passo-3"></a>
 ### 🔹 Passo 3 – Tela de boas-vindas do assistente
 ![fig3](assets/inst/fig03.png)
 
@@ -154,6 +156,7 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 
+<a id="instalacao-passo-4"></a>
 ### 🔹 Passo 4 – Aceitar o contrato de licença
 ![fig4](assets/inst/fig04.png)
 
@@ -165,6 +168,7 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 
+<a id="instalacao-passo-5"></a>
 ### 🔹 Passo 5 – Informações de versão (Release Information)
 ![fig5](assets/inst/fig05.png)
 
@@ -175,6 +179,7 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 
+<a id="instalacao-passo-6"></a>
 ### 🔹 Passo 6 – Definir pasta de instalação
 ![fig6](assets/inst/fig06.png)
 
@@ -185,6 +190,7 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 
+<a id="instalacao-passo-7"></a>
 ### 🔹 Passo 7 – Selecionar o tipo de instalação
 ![fig7](assets/inst/fig07.png)
 
@@ -195,6 +201,7 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 
+<a id="instalacao-passo-8"></a>
 ### 🔹 Passo 8 – Confirmar início da instalação
 ![fig8](assets/inst/fig08.png)
 
@@ -203,6 +210,7 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 
+<a id="instalacao-passo-9"></a>
 ### 🔹 Passo 9 – Aguardar a instalação dos componentes
 ![fig9](assets/inst/fig09.png)
 
@@ -213,6 +221,7 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 
+<a id="instalacao-passo-10"></a>
 ### 🔹 Passo 10 – Concluir a instalação
 ![fig10](assets/inst/fig10.png)
 
