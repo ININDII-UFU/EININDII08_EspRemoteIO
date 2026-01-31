@@ -222,9 +222,9 @@ Ao final deste procedimento, o sistema estará:
 
 ✅ *O CODESYS foi instalado com sucesso no sistema.*
 
----
-
 </details>
+
+---
 
 <a id="configurando-o-codesys"></a>
 <details>
