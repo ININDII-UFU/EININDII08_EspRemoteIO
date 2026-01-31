@@ -23,7 +23,7 @@
   - [Passo 9 – Aguardar a instalação dos componentes](#passo-9--aguardar-a-instalação-dos-componentes)
   - [Passo 10 – Concluir a instalação](#passo-10--concluir-a-instalação)
 
-- [⚙️ Configurando o Codesys para funcionar com o EspRemoteIO](#configurando-o-codesys)
+- [⚙️ Configurando o Codesys](#configurando-o-codesys)
   - [Passo 1 – Criar um novo projeto no CODESYS](#passo-1--criar-um-novo-projeto-no-codesys)
   - [Passo 2 – Selecionando o dispositivo PLC](#passo-2--selecionando-o-dispositivo-plc)
   - [Passo 3 – Escolhendo o PLC utilizado](#passo-3--escolhendo-o-plc-utilizado)
@@ -228,7 +228,7 @@ Ao final deste procedimento, o sistema estará:
 
 <a id="configurando-o-codesys"></a>
 <details>
-  <summary><strong> ⚙️ Configurando o Codesys para funcionar com o EspRemoteIO  </strong></summary>
+  <summary><strong> ⚙️ Configurando o Codesys </strong></summary>
 
 ### 🔹 Passo 1 – Criar um novo projeto no CODESYS
 ![fig1](assets/imgs/fig1.png)
