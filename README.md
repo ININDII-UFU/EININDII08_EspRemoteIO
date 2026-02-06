@@ -6,7 +6,7 @@
 > **Curso**: Engenharia de Controle e Automação  
 > **Instituição**: Universidade Federal de Uberlândia — FEELT  
 
-<details open>
+<details>
   <summary><strong>📑 Índice </strong></summary>
 
 - [🎯 Objetivo](#objetivo)
@@ -14,7 +14,7 @@
   - [Software](#software)
   - [Hardware](#hardware)
 
-[🧭 Instalando o Codesys](#instalando-o-codesys)
+- [🧭 Instalando o Codesys](#instalando-o-codesys)
   - [Passo 1 – Acessar o instalador do CODESYS](#instalacao-passo-1)
   - [Passo 2 – Iniciar o instalador](#instalacao-passo-2)
   - [Passo 3 – Tela de boas-vindas do assistente](#instalacao-passo-3)
@@ -27,62 +27,69 @@
   - [Passo 10 – Concluir a instalação](#instalacao-passo-10)
 
 - [⚙️ Configurando o Codesys](#configurando-o-codesys)
-  - [Passo 1 – Criar um novo projeto no CODESYS](#passo-1--criar-um-novo-projeto-no-codesys)
-  - [Passo 2 – Selecionando o dispositivo PLC](#passo-2--selecionando-o-dispositivo-plc)
-  - [Passo 3 – Escolhendo o PLC utilizado](#passo-3--escolhendo-o-plc-utilizado)
-  - [Passo 4 – Inserir as configurações de Tarefas](#passo-4--inserir-as-configurações-de-tarefas)
-  - [Passo 5 – Criar uma tarefa](#passo-5--criar-uma-tarefa)
-  - [Passo 6 – Iniciar a adição da tarefa](#passo-6--iniciar-a-adição-da-tarefa)
-  - [Passo 7 – Adicionar tarefa principal para o Loop](#passo-7--adicionar-tarefa-principal-para-o-loop)
-  - [Passo 8 – Atualizar o dispositivo do PLC](#passo-8--atualizar-o-dispositivo-do-plc)
-  - [Passo 9 – Adicionar o adaptador Ethernet](#passo-9--adicionar-o-adaptador-ethernet)
-  - [Passo 10 – Inserir dispositivo no Ethernet](#passo-10--inserir-dispositivo-no-ethernet)
-  - [Passo 11 – Adicionar Modbus TCP Client](#passo-11--adicionar-modbus-tcp-client)
-  - [Passo 12 – Adicionar dispositivo no Modbus TCP Client](#passo-12--adicionar-dispositivo-no-modbus-tcp-client)
-  - [Passo 13 – Adicionar Modbus TCP Server](#passo-13--adicionar-modbus-tcp-server)
-  - [Passo 14 – Abrir os ícones ocultos do Windows](#passo-14--abrir-os-ícones-ocultos-do-windows)
-  - [Passo 15 – Iniciar o CODESYS Control Win](#passo-15--iniciar-o-codesys-control-win)
-  - [Passo 16 – Selecionar o controlador no projeto](#passo-16--selecionar-o-controlador-no-projeto)
-  - [Passo 17 – Procurar o dispositivo na rede](#passo-17--procurar-o-dispositivo-na-rede)
-  - [Passo 18 – Selecionar o dispositivo encontrado](#passo-18--selecionar-o-dispositivo-encontrado)
-  - [Passo 19 – Selecionar a interface de rede](#passo-19--selecionar-a-interface-de-rede)
-  - [Passo 20 – Habilitar reconexão automática](#passo-20--habilitar-reconexão-automática)
-  - [Passo 21 – Criar canais no Modbus TCP Server](#passo-21--criar-canais-no-modbus-tcp-server)
-  - [Passo 22 – Configurar o Channel 0](#passo-22--configurar-o-channel-0-coils)
-  - [Passo 23 – Configurar o Channel 1](#passo-23--adicionar-channel-1-discrete-inputs)
-  - [Passo 24 – Configurar o Channel 2](#passo-24--adicionar-channel-2-holding-registers)
-  - [Passo 25 – Configurar o Channel 3](#passo-25--adicionar-channel-3-input-registers)
-  - [Passo 26 – Conferir os canais criados](#passo-26--conferir-os-canais-criados)
-  - [Passo 27 – Ajustar o Unit-ID](#passo-27--ajustar-o-unit-id-do-modbus-tcp-server)
-  - [Passo 28 – Mapear variáveis do PLC](#passo-28--mapear-variáveis-do-plc)
-  - [Passo 29 – Login e execução do PLC](#passo-29--login-e-execução-do-plc)
-  - [Passo 30 – Inserir uma bobina no Ladder](#passo-30--inserir-uma-bobina-no-ladder)
-  - [Passo 31 – Selecionar a variável da bobina](#passo-31--selecionar-a-variável-da-bobina)
-  - [Passo 32 – Resultado final no Ladder](#passo-32--resultado-final-no-ladder)
+  - [Passo 1 – Criar um novo projeto no CODESYS](#configurando-passo-1)
+  - [Passo 2 – Selecionando o dispositivo PLC](#configurando-passo-2)
+  - [Passo 3 – Escolhendo o PLC utilizado](#configurando-passo-3)
+  - [Passo 4 – Inserir as configurações de Tarefas](#configurando-passo-4)
+  - [Passo 5 – Criar uma tarefa](#configurando-passo-5)
+  - [Passo 6 – Iniciar a adição da tarefa](#configurando-passo-6)
+  - [Passo 7 – Adicionar tarefa principal para o Loop](#configurando-passo-7)
+  - [Passo 8 – Atualizar o dispositivo do PLC](#configurando-passo-8)
+  - [Passo 9 – Adicionar o adaptador Ethernet](#configurando-passo-9)
+  - [Passo 10 – Inserir dispositivo no Ethernet](#configurando-passo-10)
+  - [Passo 11 – Adicionar Modbus TCP Client](#configurando-passo-11)
+  - [Passo 12 – Adicionar dispositivo no Modbus TCP Client](#configurando-passo-12)
+  - [Passo 13 – Adicionar Modbus TCP Server](#configurando-passo-13)
+  - [Passo 14 – Abrir os ícones ocultos do Windows](#configurando-passo-14)
+  - [Passo 15 – Iniciar o CODESYS Control Win](#configurando-passo-15)
+  - [Passo 16 – Selecionar o controlador no projeto](#configurando-passo-16)
+  - [Passo 17 – Procurar o dispositivo na rede](#configurando-passo-17)
+  - [Passo 18 – Selecionar o dispositivo encontrado](#configurando-passo-18)
+  - [Passo 19 – Selecionar a interface de rede](#configurando-passo-19)
+  - [Passo 20 – Habilitar reconexão automática](#configurando-passo-20)
+  - [Passo 21 – Criar canais no Modbus TCP Server](#configurando-passo-21)
+  - [Passo 22 – Configurar o Channel 0](#configurando-passo-22)
+  - [Passo 23 – Configurar o Channel 1](#configurando-passo-23)
+  - [Passo 24 – Configurar o Channel 2](#configurando-passo-24)
+  - [Passo 25 – Configurar o Channel 3](#configurando-passo-25)
+  - [Passo 26 – Conferir os canais criados](#configurando-passo-26)
+  - [Passo 27 – Ajustar o Unit-ID](#configurando-passo-27)
+  - [Passo 28 – Mapear variáveis do PLC](#configurando-passo-28)
+  - [Passo 29 – Login e execução do PLC](#configurando-passo-29)
+  - [Passo 30 – Inserir uma bobina no Ladder](#configurando-passo-30)
+  - [Passo 31 – Selecionar a variável da bobina](#configurando-passo-31)
+  - [Passo 32 – Resultado final no Ladder](#configurando-passo-32)
 
 - [📡 Preparando a ESP32 (ESP_Remote_IO)](#preparando-esp32)
-  - [Passo 1 – Criar um fork do repositório no GitHub](#passo-1--criar-um-fork-do-repositório-no-github)
-  - [Passo 2 – Confirmar a criação do fork](#passo-2--confirmar-a-criação-do-fork)
-  - [Passo 3 – Abrir o Visual Studio Code](#passo-3--abrir-o-visual-studio-code)
-  - [Passo 4 – Abrir a tela inicial do VS Code](#passo-4--abrir-a-tela-inicial-do-vs-code)
-  - [Passo 5 – Selecionar clonagem via GitHub](#passo-5--selecionar-clonagem-via-github)
-  - [Passo 6 – Escolher o repositório ESP_Remote_IO](#passo-6--escolher-o-repositório-esp_remote_io)
-  - [Passo 7 – Abrir o projeto clonado](#passo-7--abrir-o-projeto-clonado)
-  - [Passo 8 – Verificar a estrutura do projeto](#passo-8--verificar-a-estrutura-do-projeto)
-  - [Passo 9 – Iniciar o upload para a ESP32](#passo-9--iniciar-o-upload-para-a-esp32)
-  - [Passo 10 – Compilação e gravação concluídas](#passo-10--compilação-e-gravação-concluídas)
+  - [Passo 1 – Criar um fork do repositório no GitHub](#preparando-passo-1)
+  - [Passo 2 – Confirmar a criação do fork](#preparando-passo-2)
+  - [Passo 3 – Abrir o Visual Studio Code](#preparando-passo-3)
+  - [Passo 4 – Abrir a tela inicial do VS Code](#preparando-passo-4)
+  - [Passo 5 – Selecionar clonagem via GitHub](#preparando-passo-5)
+  - [Passo 6 – Escolher o repositório ESP_Remote_IO](#preparando-passo-6)
+  - [Passo 7 – Abrir o projeto clonado](#preparando-passo-7)
+  - [Passo 8 – Verificar a estrutura do projeto](#preparando-passo-8)
+  - [Passo 9 – Iniciar o upload para a ESP32](#preparando-passo-9)
+  - [Passo 10 – Compilação e gravação concluídas](#preparando-passo-10)
 
 - [📡 Vinculando a ESP32 ao Codesys](#vinculando-esp32)
+  - [Passo 1 – Anote o IP da ESP32](#vinculando-passo-1)
+  - [Passo 2 – Acesse o Modbus TCP Server](#vinculando-passo-2)
+  - [Passo 3 – Aponte no Codesys o IP da ESP32](#vinculando-passo-3)
+  - [Passo 4 – Login e Start no PLC](#vinculando-passo-4)
 
 - [✅ Resultado esperado](#resultado-esperado)
+
 - [⚠️ Observações importantes](#observações-importantes)
+
 - [📚 Referências](#referências)
 
 </details>
 
 ---
+
 <a id="objetivo"></a>
-<details>
+<details open>
   <summary> <strong> 🎯 Objetivo </strong></summary>
 
 Este tutorial tem como objetivo orientar, de forma **didática e passo a passo**, a criação de um **projeto Modbus no CODESYS V3.5 SP21**, utilizando a ferramenta **ESP_Remote_IO**, de modo que uma **ESP32 funcione como uma Remota Modbus**, permitindo comunicação completa com o sistema de controle.
@@ -393,7 +400,7 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 
-### 🔹 Passo 19 – Selecionar a interface de rede
+### 🔹 Passo 19a – Selecionar a interface de rede
 ![fig19](assets/imgs/fig19.png)
 
 1. Clique em **Modbus_TCP_Client**
@@ -402,6 +409,24 @@ Ao final deste procedimento, o sistema estará:
 4. Clique em **OK**
 
 ⚠️ *Adaptador incorreto impede a comunicação Modbus.*
+
+---
+
+### 🔹 Passo 19b – Selecionar a interface de rede
+![fig37](assets/imgs/fig37.png)
+
+1. clique em **yes** caso a seguinte mensagem aparecer.
+
+---
+
+### 🔹 Passo 19c – Selecionar a interface de rede
+![fig38](assets/imgs/fig38.png)
+
+1. Digite **user** no campo **Name**
+2. Digite **Bancada@X** onde X é numero da sua bancada
+3. Clique em **ok** 
+
+⚠️ *Você esta acessando o PLC virtual usando o login e a senha definidos pelo administrador do laboratório.*
 
 ---
 
@@ -639,6 +664,38 @@ Ao final deste procedimento, o sistema estará:
 <a id="vinculando-esp32"></a>
 <details>
   <summary><strong> 📡 Vinculando a ESP32 ao Codesys </strong></summary>
+
+<a id="vinculando-passo-1"></a>
+### 🔹 Passo 1 – Anote o IP da ESP32
+![fig33](assets/imgs/fig33.png)
+
+1. Anote o ip da ESP32 que é mostrado no display.
+
+---
+
+<a id="vinculando-passo-2"></a>
+### 🔹 Passo 2 – Acesse o Modbus TCP Server
+![fig34](assets/imgs/fig34.png)
+
+1. Dê um duplo clique em **Modbus_TCP_Server**
+
+---
+
+<a id="vinculando-passo-3"></a>
+### 🔹 Passo 3 – Aponte no Codesys o IP da ESP32
+![fig35](assets/imgs/fig35.png)
+
+1. Com um clique simples selecione o item **geral**.
+2. Em **Server IP address** digite o ip da ESP32
+
+---
+
+<a id="vinculando-passo-4"></a>
+### 🔹 Passo 4 – Login e Start no PLC
+![fig36](assets/imgs/fig36.png)
+
+1. Faça **Login** no plc e dê **Start** no mesmo.
+
 </details>
 
 ---
