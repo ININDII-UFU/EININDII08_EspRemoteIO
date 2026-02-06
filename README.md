@@ -14,20 +14,7 @@
   - [Software](#software)
   - [Hardware](#hardware)
 
-- [📡 Preparando a ESP32 (ESP_Remote_IO)](#preparando-esp32)
-  - [Passo 1 – Criar um fork do repositório no GitHub](#passo-1--criar-um-fork-do-repositório-no-github)
-  - [Passo 2 – Confirmar a criação do fork](#passo-2--confirmar-a-criação-do-fork)
-  - [Passo 3 – Abrir o Visual Studio Code](#passo-3--abrir-o-visual-studio-code)
-  - [Passo 4 – Abrir a tela inicial do VS Code](#passo-4--abrir-a-tela-inicial-do-vs-code)
-  - [Passo 5 – Selecionar clonagem via GitHub](#passo-5--selecionar-clonagem-via-github)
-  - [Passo 6 – Escolher o repositório ESP_Remote_IO](#passo-6--escolher-o-repositório-esp_remote_io)
-  - [Passo 7 – Abrir o projeto clonado](#passo-7--abrir-o-projeto-clonado)
-  - [Passo 8 – Verificar a estrutura do projeto](#passo-8--verificar-a-estrutura-do-projeto)
-  - [Passo 9 – Iniciar o upload para a ESP32](#passo-9--iniciar-o-upload-para-a-esp32)
-  - [Passo 10 – Compilação e gravação concluídas](#passo-10--compilação-e-gravação-concluídas)
-
-
-- [🧭 Instalando o Codesys](#instalando-o-codesys)
+[🧭 Instalando o Codesys](#instalando-o-codesys)
   - [Passo 1 – Acessar o instalador do CODESYS](#instalacao-passo-1)
   - [Passo 2 – Iniciar o instalador](#instalacao-passo-2)
   - [Passo 3 – Tela de boas-vindas do assistente](#instalacao-passo-3)
@@ -73,6 +60,20 @@
   - [Passo 31 – Selecionar a variável da bobina](#passo-31--selecionar-a-variável-da-bobina)
   - [Passo 32 – Resultado final no Ladder](#passo-32--resultado-final-no-ladder)
 
+- [📡 Preparando a ESP32 (ESP_Remote_IO)](#preparando-esp32)
+  - [Passo 1 – Criar um fork do repositório no GitHub](#passo-1--criar-um-fork-do-repositório-no-github)
+  - [Passo 2 – Confirmar a criação do fork](#passo-2--confirmar-a-criação-do-fork)
+  - [Passo 3 – Abrir o Visual Studio Code](#passo-3--abrir-o-visual-studio-code)
+  - [Passo 4 – Abrir a tela inicial do VS Code](#passo-4--abrir-a-tela-inicial-do-vs-code)
+  - [Passo 5 – Selecionar clonagem via GitHub](#passo-5--selecionar-clonagem-via-github)
+  - [Passo 6 – Escolher o repositório ESP_Remote_IO](#passo-6--escolher-o-repositório-esp_remote_io)
+  - [Passo 7 – Abrir o projeto clonado](#passo-7--abrir-o-projeto-clonado)
+  - [Passo 8 – Verificar a estrutura do projeto](#passo-8--verificar-a-estrutura-do-projeto)
+  - [Passo 9 – Iniciar o upload para a ESP32](#passo-9--iniciar-o-upload-para-a-esp32)
+  - [Passo 10 – Compilação e gravação concluídas](#passo-10--compilação-e-gravação-concluídas)
+
+- [📡 Vinculando a ESP32 ao Codesys](#vinculando-esp32)
+
 - [✅ Resultado esperado](#resultado-esperado)
 - [⚠️ Observações importantes](#observações-importantes)
 - [📚 Referências](#referências)
@@ -114,112 +115,6 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 
-<a id="preparando-esp32"></a>
-<details>
-  <summary><strong> 📡 Preparando a ESP32 (ESP_Remote_IO) </strong></summary>
-
-### 🔹 Passo 1 – Criar um fork do repositório no GitHub
-![fig1](assets/esp/fig01.png)
-
-1. Acesse o repositório **EININDII08_Codesys_EspRemoteIO**
-2. Clique no botão **Fork** (ou **bifurcação** em pt-BR) no canto superior direito
-3. Aguarde a criação da cópia do repositório em sua conta
-
-💡 *O fork permite editar e clonar o projeto sem alterar o repositório original.*
-
----
-
-### 🔹 Passo 2 – Confirmar a criação do fork
-![fig2](assets/esp/fig02.png)
-
-1. Verifique se o **Owner** agora é a sua conta
-2. Confirme o nome do repositório
-3. Clique em **Create fork** (caso ainda não tenha confirmado)
-
----
-
-### 🔹 Passo 3 – Abrir o Visual Studio Code
-![fig3](assets/esp/fig03.png)
-
-1. Abra o **Visual Studio Code**
-2. No menu superior, clique em **Arquivo**
-3. Selecione **Fechar Pasta**, caso exista algum projeto aberto
-
-⚠️ *Isso evita conflitos ao abrir o novo projeto.*
-
----
-
-### 🔹 Passo 4 – Abrir a tela inicial do VS Code
-![fig4](assets/esp/fig04.png)
-
-1. Na tela inicial do VS Code, no barra lateral esquerda clique no botão referente a **Controle de Código ***
-2. Na seguencia clique no botão **Clone Repository**
-3. Certifique-se de que nenhuma pasta está aberta
-
----
-
-### 🔹 Passo 5 – Selecionar clonagem via GitHub
-![fig5](assets/esp/fig05.png)
-
-1. Selecione a opção **Clonar do GitHub**
-2. Caso solicitado, autorize o acesso à sua conta GitHub
-
----
-
-### 🔹 Passo 6 – Escolher o repositório ESP_Remote_IO
-![fig6](assets/esp/fig06.png)
-
-1. Na lista de repositórios, selecione:
-   **EININDII08_Codesys_EspRemoteIO**
-2. Aguarde o início do processo de clonagem
-
----
-
-### 🔹 Passo 7 – Abrir o projeto clonado
-![fig7](assets/esp/fig07.png)
-
-1. Quando solicitado, clique em **Abrir**
-2. Aguarde o VS Code carregar os arquivos do projeto
-
----
-
-### 🔹 Passo 8 – Verificar a estrutura do projeto
-![fig8](assets/esp/fig08.png)
-
-1. Confirme a presença das pastas:
-   - `src`
-   - `include`
-   - `lib`
-   - `platformio.ini`
-2. Abra o arquivo **platformio.ini** para conferência
-3. Certifique-se de que o valor da tag **kitid** seja o da **Esp32** que vc esta usando.
-
-💡 *Este arquivo define a placa ESP32, rede e bibliotecas.*
-
----
-
-### 🔹 Passo 9 – Iniciar o upload para a ESP32
-![fig9](assets/esp/fig09.png)
-
-1. Na barra inferior do VS Code, clique em **PlatformIO: Upload**
-2. Aguarde o início do processo de compilação
-
----
-
-### 🔹 Passo 10 – Compilação e gravação concluídas
-![fig10](assets/esp/fig10.png)
-
-1. Observe o terminal do PlatformIO
-2. Confirme as mensagens:
-   - `SUCCESS`
-   - `Firmware uploaded`
-3. A ESP32 está pronta para comunicação Modbus
-
-✅ *O firmware foi compilado e gravado com sucesso na ESP32.*
-
-</details>
-
----
 <a id="instalando-o-codesys"></a>
 <details>
   <summary><strong> 🧭 Instalando o Codesys  </strong></summary>
@@ -413,7 +308,7 @@ Ao final deste procedimento, o sistema estará:
 ### 🔹 Passo 8 – Atualizar o dispositivo do PLC
 ![fig8](assets/imgs/fig8.png)
 
-1. Na árvore de dispositivos, **clique com o botão direito** no **PLC (CODESYS Control RTE...)**
+1. Na árvore de dispositivos, **clique com o botão direito** no **PLC (CODESYS Control Win V3...)**
 2. Selecione **Atualizar dispositivo...**
 
 💡 *Isso ajuda o CODESYS a recarregar as opções e dispositivos disponíveis.*
@@ -479,7 +374,7 @@ Ao final deste procedimento, o sistema estará:
 ### 🔹 Passo 16 – Selecionar o controlador no projeto
 ![fig16](assets/imgs/fig16.png)
 
-1. Selecione **CODESYS Control RTE...** na árvore de dispositivos
+1. Selecione **CODESYS Control WIN...** na árvore de dispositivos
 
 ---
 
@@ -630,6 +525,120 @@ Ao final deste procedimento, o sistema estará:
 
 💡 *Nesta etapa o plc é inicido. Vá ate a ESP clique no botão RTN1 e a bobina RELE será acionada.*
 
+</details>
+
+---
+
+<a id="preparando-esp32"></a>
+<details>
+  <summary><strong> 📡 Preparando a ESP32 (ESP_Remote_IO) </strong></summary>
+
+### 🔹 Passo 1 – Criar um fork do repositório no GitHub
+![fig1](assets/esp/fig01.png)
+
+1. Acesse o repositório **EININDII08_Codesys_EspRemoteIO**
+2. Clique no botão **Fork** (ou **bifurcação** em pt-BR) no canto superior direito
+3. Aguarde a criação da cópia do repositório em sua conta
+
+💡 *O fork permite editar e clonar o projeto sem alterar o repositório original.*
+
+---
+
+### 🔹 Passo 2 – Confirmar a criação do fork
+![fig2](assets/esp/fig02.png)
+
+1. Verifique se o **Owner** agora é a sua conta
+2. Confirme o nome do repositório
+3. Clique em **Create fork** (caso ainda não tenha confirmado)
+
+---
+
+### 🔹 Passo 3 – Abrir o Visual Studio Code
+![fig3](assets/esp/fig03.png)
+
+1. Abra o **Visual Studio Code**
+2. No menu superior, clique em **Arquivo**
+3. Selecione **Fechar Pasta**, caso exista algum projeto aberto
+
+⚠️ *Isso evita conflitos ao abrir o novo projeto.*
+
+---
+
+### 🔹 Passo 4 – Abrir a tela inicial do VS Code
+![fig4](assets/esp/fig04.png)
+
+1. Na tela inicial do VS Code, no barra lateral esquerda clique no botão referente a **Controle de Código ***
+2. Na seguencia clique no botão **Clone Repository**
+3. Certifique-se de que nenhuma pasta está aberta
+
+---
+
+### 🔹 Passo 5 – Selecionar clonagem via GitHub
+![fig5](assets/esp/fig05.png)
+
+1. Selecione a opção **Clonar do GitHub**
+2. Caso solicitado, autorize o acesso à sua conta GitHub
+
+---
+
+### 🔹 Passo 6 – Escolher o repositório ESP_Remote_IO
+![fig6](assets/esp/fig06.png)
+
+1. Na lista de repositórios, selecione:
+   **EININDII08_Codesys_EspRemoteIO**
+2. Aguarde o início do processo de clonagem
+
+---
+
+### 🔹 Passo 7 – Abrir o projeto clonado
+![fig7](assets/esp/fig07.png)
+
+1. Quando solicitado, clique em **Abrir**
+2. Aguarde o VS Code carregar os arquivos do projeto
+
+---
+
+### 🔹 Passo 8 – Verificar a estrutura do projeto
+![fig8](assets/esp/fig08.png)
+
+1. Confirme a presença das pastas:
+   - `src`
+   - `include`
+   - `lib`
+   - `platformio.ini`
+2. Abra o arquivo **platformio.ini** para conferência
+3. Certifique-se de que o valor da tag **kitid** seja o da **Esp32** que vc esta usando.
+
+💡 *Este arquivo define a placa ESP32, rede e bibliotecas.*
+
+---
+
+### 🔹 Passo 9 – Iniciar o upload para a ESP32
+![fig9](assets/esp/fig09.png)
+
+1. Na barra inferior do VS Code, clique em **PlatformIO: Upload**
+2. Aguarde o início do processo de compilação
+
+---
+
+### 🔹 Passo 10 – Compilação e gravação concluídas
+![fig10](assets/esp/fig10.png)
+
+1. Observe o terminal do PlatformIO
+2. Confirme as mensagens:
+   - `SUCCESS`
+   - `Firmware uploaded`
+3. A ESP32 está pronta para comunicação Modbus
+
+✅ *O firmware foi compilado e gravado com sucesso na ESP32.*
+
+</details>
+
+---
+
+<a id="vinculando-esp32"></a>
+<details>
+  <summary><strong> 📡 Vinculando a ESP32 ao Codesys </strong></summary>
 </details>
 
 ---
