@@ -308,7 +308,7 @@ Ao final deste procedimento, o sistema estará:
 ### 🔹 Passo 8 – Atualizar o dispositivo do PLC
 ![fig8](assets/imgs/fig8.png)
 
-1. Na árvore de dispositivos, **clique com o botão direito** no **PLC (CODESYS Control RTE...)**
+1. Na árvore de dispositivos, **clique com o botão direito** no **PLC (CODESYS Control Win V3...)**
 2. Selecione **Atualizar dispositivo...**
 
 💡 *Isso ajuda o CODESYS a recarregar as opções e dispositivos disponíveis.*
