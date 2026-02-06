@@ -400,7 +400,7 @@ Ao final deste procedimento, o sistema estará:
 
 ---
 
-### 🔹 Passo 19 – Selecionar a interface de rede
+### 🔹 Passo 19a – Selecionar a interface de rede
 ![fig19](assets/imgs/fig19.png)
 
 1. Clique em **Modbus_TCP_Client**
@@ -409,6 +409,24 @@ Ao final deste procedimento, o sistema estará:
 4. Clique em **OK**
 
 ⚠️ *Adaptador incorreto impede a comunicação Modbus.*
+
+---
+
+### 🔹 Passo 19b – Selecionar a interface de rede
+![fig37](assets/imgs/fig37.png)
+
+1. clique em **yes** caso a seguinte mensagem aparecer.
+
+---
+
+### 🔹 Passo 19c – Selecionar a interface de rede
+![fig38](assets/imgs/fig38.png)
+
+1. Digite **user** no campo **Name**
+2. Digite **Bancada@X** onde X é numero da sua bancada
+3. Clique em **ok** 
+
+⚠️ *Você esta acessando o PLC virtual usando o login e a senha definidos pelo administrador do laboratório.*
 
 ---
 
